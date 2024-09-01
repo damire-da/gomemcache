@@ -14,10 +14,10 @@ func (c MemCache) Get(key string) interface{} {
 	return c.data[key]
 }
 
-func (c MemCache) Set(key string, value interface{}) {
+func (c *MemCache) Set(key string, value interface{}) {
 	c.data[key] = value
 }
 
-func (c MemCache) Delete(key string) {
+func (c *MemCache) Delete(key string) {
 	delete(c.data, key)
 }
